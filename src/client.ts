@@ -19,5 +19,5 @@ const subscribe = (topic: string, offset: number) => {
     })
 
 
-    client.send(subscribe("notify",  0))
+    client.send(subscribe("event_0",  0))
 })()
