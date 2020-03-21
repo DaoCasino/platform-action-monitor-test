@@ -2,7 +2,7 @@ import { OPEN_STATE, createConnection, randomString } from './utils'
 import { ResponseMessage, Method } from './interfaces'
 import WebSocket from 'ws'
 
-const subscribe = (topic: string, offset: number) => {
+const subscribe = (topic: string, offset: string) => {
     const id = randomString()
     return JSON.stringify({
         method: Method.SUBSCRIBE,
@@ -19,5 +19,5 @@ const subscribe = (topic: string, offset: number) => {
     })
 
 
-    client.send(subscribe("event_0",  0))
+    client.send(subscribe("event_0",  "0"))
 })()
