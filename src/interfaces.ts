@@ -14,3 +14,13 @@ export enum Method {
     UNSUBSCRIBE = "unsubscribe",
     BROADCAST = "broadcast"
 }
+
+export interface Event {
+	offset: string
+	sender: string
+	casino_id: string
+	game_id: string
+    req_id: string
+    event_type: number
+	data?: any
+}
