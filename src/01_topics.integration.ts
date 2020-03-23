@@ -42,7 +42,7 @@ describe('Platform Action Monitor', () => {
 
                 client.send(JSON.stringify({
                     method: Method.SUBSCRIBE,
-                    params: { topic: topicName, offset: 25 },
+                    params: { topic: topicName, offset: "25" },
                     id
                 }))
 
