@@ -5,6 +5,7 @@
   "author": "Gar|k <garik.djan@gmail.com>",
   "private": false,
   "scripts": {
+    "bench": "node src/bench.js",
     "client": "ts-node src/client.ts",
     "prepare": "yarn build",
     "build": "rm -rf build/* && tsc",
