@@ -7,7 +7,7 @@ const path = require('path')
 const CLIENT = path.resolve(__dirname, './../build/client.js')
 
 // Config
-const CLIENT_MAX = 10
+const CLIENT_MAX = 5
 const IS_SILENT = false
 const DURATION = 0 // milliseconds
 const SERVER_ENDPOINT = 'ws://localhost:8888/'

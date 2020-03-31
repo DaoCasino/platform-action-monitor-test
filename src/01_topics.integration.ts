@@ -20,7 +20,7 @@ describe('Platform Action Monitor', () => {
 
     describe('Topics', () => {
         const clients:WebSocket[] = []
-        const topicName = 'test'
+        const topicName = 'event_0'
 
         it(`When a ${NUM_CLIENTS} client connects, then a connection is established`, async () => {
             for (let i = 0; i < NUM_CLIENTS; i++) {
@@ -42,7 +42,7 @@ describe('Platform Action Monitor', () => {
 
                 client.send(JSON.stringify({
                     method: Method.SUBSCRIBE,
-                    params: { topic: topicName, offset: "25" },
+                    params: { topic: topicName, offset: 25 },
                     id
                 }))
 
