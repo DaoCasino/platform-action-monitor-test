@@ -26,10 +26,12 @@ const parseEventMessage = (res: ResponseMessage) => {
 
 (async () => {
     const client: WebSocket = await createConnection(serverEndpoint)
+    console.log('client connected', clientId)
     client.on('message', (message: string) => {
         const res = JSON.parse(message.toString()) as ResponseMessage
         parseEventMessage(res)
     })
 
     client.send(subscribe("event_0",  0))
+    console.log('client send subscribe', clientId)
 })()
